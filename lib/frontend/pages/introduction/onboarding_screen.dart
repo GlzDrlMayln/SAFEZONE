@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:safezone/frontend/pages/authentication/login.dart';
 
 class OnboardingScreen extends StatefulWidget {
   @override
@@ -118,7 +119,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         // Navigate to the next screen
                         Navigator.pushReplacement(
                           context,
-                          MaterialPageRoute(builder: (_) => NextScreen()),
+                          MaterialPageRoute(builder: (_) => Login()),
                         );
                       } else {
                         // Go to the next page
@@ -165,16 +166,3 @@ class OnboardingContent {
   });
 }
 
-class NextScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          'Welcome to the Next Screen!',
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
-    );
-  }
-}
